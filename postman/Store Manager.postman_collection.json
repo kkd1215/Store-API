@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "0feb560f-9dc7-410c-b73a-09dfcf8b1e25",
+		"name": "Store Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All products static",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/v1/products/static",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"static"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/v1/products?numericFilters=price>50,rating>=4",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "feature",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "sort",
+							"value": "price,-name",
+							"disabled": true
+						},
+						{
+							"key": "company",
+							"value": "ikea",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "15",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "fields",
+							"value": "company,rating",
+							"disabled": true
+						},
+						{
+							"key": "numericFilters",
+							"value": "price>50,rating>=4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "http://localhost:3000"
+		}
+	]
+}
